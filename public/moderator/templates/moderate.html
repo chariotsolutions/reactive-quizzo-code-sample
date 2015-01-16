@@ -1,0 +1,41 @@
+<h2 class="text-center">Game Moderator Console</h2>
+<div class="row">
+    <div class="col-md-3 well">
+        <h3>Start a game...</h3>
+        <table class="table table-striped table-bordered">
+            <tr>
+                <th>Game</th>
+                <th>Description</th>
+                <th>Action</th>
+            </tr>
+            <tr ng-repeat="definition in gameDefinitions">
+                <td>{{ definition.title }}</td>
+                <td>{{ definition.description }}</td>
+                <td>
+                    <button class="btn btn-large btn-red"
+                            ng-click="startGame(definition.id)">Start game!
+                    </button>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+    <div class="col-md-1">&nbsp;</div>
+    <div class="col-md-8 well">
+        <h3>Select a game instance</h3>
+        <table class="table table-striped table-bordered">
+            <tr>
+                <th>Game Name</th>
+                <th>Game ID</th>
+                <th>Actions</th>
+            </tr>
+            <tr class='table-rows' ng-repeat="gameInstance in runningGameInstances track by $index">
+                <td>{{ gameInstance.game.title }}</td>
+                <td>{{ gameInstance.id }}</td>
+                <td>
+                    <button class="btn btn-large" ng-click="advance(gameInstance.id)">Advance Game</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

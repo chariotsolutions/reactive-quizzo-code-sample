@@ -1,0 +1,16 @@
+Reactive Quizzo
+=================
+
+This application is a reactive Scala Play quiz game, with a Javascript AngularJS front-end.
+
+The features demonstrated in this app are:
+
+* Single-Page JS application in Angular
+* The Play framework - specifically using Actors and JSON to execute and communicate remotely
+* Tests in both Scala and Javascript
+* A gulp Javascript build
+
+
+## Contributions
+
+Contributions of enhancements or bug fixes are welcomed via pull request.

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Quizzo</title>
+
+    <link href="lib/ionic/css/ionic.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="./app.js"></script>
+</head>
+<body ng-app="quizzoPlayerApp">
+<ion-header-bar align-title='center' class='bar-positive'>
+    <h1 class='title'>Reactive Quizzo <span ng-bind="gameState.nickname"></span>
+        <!-- ick! -->
+        <span ng-if="gameState.score" ng-bind="'|' + ' ' + gameState.score"></span></h1>
+</ion-header-bar>
+<ion-nav-view></ion-nav-view>
+</body>
+</html>

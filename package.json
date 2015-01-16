@@ -1,0 +1,40 @@
+{
+  "name": "angular-reactive-quizzo-prototype",
+  "version": "0.0.1",
+  "description": "A prototype app fleshing out the angularjs side of the quizzo reacgive project",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "karma start karma.conf.js",
+    "start": "ws -d app",
+    "jsdoc": "node_modules/jsdoc/jsdoc.js -r -d docs app/js; open docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:chariotsolutions/reactive-quizzo.git"
+  },
+  "author": "Michael Pigg / Ken Rimple",
+  "license": "APACHE",
+  "bugs": {
+    "url": "https://github.com/chariotsolutions/reactive-quizzo/issues"
+  },
+  "homepage": "https://github.com/chariotsolutions/reactive-quizzo",
+  "devDependencies": {
+    "gulp": "^3.8.8",
+    "gulp-jshint": "^1.8.4",
+    "gulp-karma": "0.0.4",
+    "jshint": "^2.5.3",
+    "jshint-stylish": "^0.4.0",
+    "karma": "^0.12.21",
+    "karma-chrome-launcher": "^0.1.4",
+    "karma-jasmine": "^0.1.0",
+    "karma-story-reporter": "^0.2.2",
+    "local-web-server": "^0.5.13",
+    "protractor": "^1.0.0"
+  },
+  "dependencies": {
+    "karma": "^0.12.21"
+  }
+}

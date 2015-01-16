@@ -1,0 +1,79 @@
+<ion-view ng-controller='JoinGameCtrl'>
+    <ion-content has-header='true'>
+        <div class="row">
+            <div class="col">
+                <div class='card'>
+                    <p>Let's join a game.
+                        Enter your nickname and email address,
+                        then select a game. Click 'Play' to start.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class='list'>
+                    <label class='item item-input'>
+                        <span class='input-label'>Nickname</span>
+                        <input
+                                name='nick'
+                                id='nick'
+                                type='text'
+                                placeholder='Nickname'
+                                required
+                                ng-min-length='1'
+                                ng-max-length='20'
+                                ng-model='player.nickname'>
+                    </label>
+                    <label class='item item-input'>
+                        <span class='input-label'>Email</span>
+                        <input
+                                name='email'
+                                id='email'
+                                type='email'
+                                placeholder='email address'
+                                required
+                                ng-min-length='5'
+                                ng-max-length='70'
+                                ng-model='player.email'>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                    <h2 class="title">Select a game...</h2>
+            </div>
+        </div>
+
+        <div class='row'><div class='col'>&nbsp;</div></div>
+
+        <div class="row">
+            <div class="col">
+                <ion-list class="block">
+                    <ion-refresher
+                            pulling-text="Pull to refresh"
+                            on-refresh="getGames(true)">
+                    </ion-refresher>
+                    <ion-item ng-if='!games.length' class="text-center"></ion-item>
+                    <ion-radio
+                            ng-repeat='game in games'
+                            ng-model='player.gameId'
+                            ng-value='game.id'>
+                        {{ game.title }}
+                    </ion-radio>
+                </ion-list>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <button class='button button-full button-positive'
+                        ng-disabled='theForm.$invalid'
+                        ng-click='joinGame(player)'>Login!
+                </button>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

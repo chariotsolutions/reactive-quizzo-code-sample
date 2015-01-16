@@ -1,0 +1,35 @@
+{
+  "name": "angular-reactive-js-prototype",
+  "version": "0.0.1",
+  "homepage": "https://github.com/chariotsolutions/reactive-quizzo",
+  "authors": [
+    "Ken Rimple <krimple@chariotsolutions.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.3.0-beta9",
+    "angular-mocks": "~1.3.0-beta9",
+    "angular-cookies": "~1.3.0-beta9",
+    "angular-ui-router": "~0.2.10",
+    "jQuery": "~2.1.1",
+    "angular-ui-bootstrap-bower": "~0.11.0",
+    "angular-route": "~1.3.0-beta9",
+    "md5-angular-filter": "~0.0.1",
+    "bootstrap": "~3.2.0",
+    "ngSocket": "~0.2.1",
+    "socket.io-client": "~1.1.0",
+    "angular-animate": "~1.3.0"
+  },
+  "resolutions": {
+    "angular": "1.3.0"
+  }
+}

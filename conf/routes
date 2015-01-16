@@ -1,0 +1,22 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+GET            /                                          controllers.Assets.at(path="/public", file="index.html")
+
+OPTIONS        /*any                                      controllers.CorsController.preflight(any)
+
+POST           /login                                     controllers.Application.login
+
+GET            /api/v1.0/player/games                     controllers.GamePlayer.games
+GET            /api/v1.0/player/games/ws/:gameId          controllers.GamePlayer.webSocket(gameId)
+POST           /api/v1.0/player/games/:gameId             controllers.GamePlayer.gameAction(gameId)
+
+GET            /api/v1.0/moderator/available-games        controllers.GameModerator.listGames
+GET            /api/v1.0/moderator/games                  controllers.GameModerator.getGames
+GET            /api/v1.0/moderator/games/:gameId          controllers.GameModerator.getGame(gameId: String)
+POST           /api/v1.0/moderator/games/:gameId          controllers.GameModerator.gameAction(gameId: String)
+
+# Map static resources from the /public folder to the /assets URL path
+GET            /game/*file                                controllers.Assets.at(path="/public/game", file)
+GET            /moderator/*file                           controllers.Assets.at(path="/public/moderator", file)

@@ -1,0 +1,26 @@
+// our stuff here
+p.your-answer {
+    font-weight: bold;
+}
+span.correct-answer {
+    color: blue;
+}
+
+span.incorrect-answer {
+    color: red;
+}
+
+.table-rows.ng-enter
+{
+    -webkit-transition: 1s linear all;
+    transition: 1s linear all;
+    border: 2px solid red;
+    opacity: 0;
+
+}
+
+.table-rows.ng-enter.ng-enter-active
+{
+    opacity: 1;
+    transition: 1s fade all;
+}

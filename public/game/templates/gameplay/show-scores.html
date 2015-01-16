@@ -1,0 +1,17 @@
+<h3 ng-bind="question"></h3>
+<h4 ng-controller='ScoreCtrl'>Your Score: {{ gameState.score }}</h4>
+
+<h4>Answers</h4>
+
+<div class='card'>
+    <div class="item item-icon-right" 
+        ng-repeat="answer in gameState.answers">
+        <span ng-if="gameState.currentAnswer === answer.id && answer.score > 0">(Correct)</span>
+        {{ answer.answer }}
+        <span ng-if="gameState.currentAnswerCorrect()"
+            class="badge badge-assertive">{{ answer.points }} Points!</span>
+        <i ng-if="isCurrentAnswer()" class="correct-icon icon ion-checkmark-round"></i>
+        <i ng-if="isNotCurrentAnswer()" class="incorrect-icon icon ion-close-round"></i>
+    </div>
+</div>
+

@@ -1,0 +1,18 @@
+<h3 ng-bind="gameState.currentQuestion"></h3>
+<hr/>
+
+<h4>Select an answer:</h4>
+
+<ion-list>
+    <ion-radio ng-model="gameState.currentAnswer"
+               ng-value="answer.id"
+               ng-repeat="answer in gameState.answers">
+        {{ answer.answer }}
+    </ion-radio>
+</ion-list>
+
+<button ng-disable="gameState.currentAnswer === null"
+    ng-click="answerQuestion(gameState.currentAnswer)"
+    class="button button-full button-positive">Vote!
+</button>
+

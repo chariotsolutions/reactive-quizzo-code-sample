@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name='viewport' content='width=device-width, initial-scale=2'>
+    <title>Reactive Quizzo - Moderator Application</title>
+    <link rel='stylesheet' href='bower_components/bootstrap/dist/css/bootstrap.css'>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="stylesheets/main.css">
+    <script src='bower_components/jQuery/dist/jquery.js'></script>
+    <script src='bower_components/angular/angular.js'></script>
+    <script src='bower_components/angular-mocks/angular-mocks.js'></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src='bower_components/angular-cookies/angular-cookies.js'></script>
+    <script src='bower_components/angular-route/angular-route.js'></script>
+    <script src='bower_components/angular-ui-bootstrap-bower/ui-bootstrap-tpls.js'></script>
+    <script src='bower_components/md5-angular-filter/js/md5.filter.js'></script>
+</head>
+<body ng-app='quizzoModeratorApp'>
+<div class='container-fluid'>
+    <div class='row'>
+        <h1 class='col-xs-12 col-lg-12 text-center'>Reactive Quizzo - Moderator Console</h1>
+    </div>
+
+    <div ng-view>
+        <!-- application views here -->
+    </div>
+
+    <script src='javascripts/common/quizzoCommonApp.js'></script>
+    <script src='javascripts/common/services/commonServices.js'></script>
+    <script src='javascripts/moderatorApp.js'></script>
+    <script src='javascripts/controllers/SignonCtrl.js'></script>
+    <script src='javascripts/controllers/ModeratorCtrl.js'></script>
+    <script src='javascripts/services/moderatorValue.js'></script>
+    <script src='javascripts/services/moderatorService.js'></script>
+</div>
+</body>
+</html>
